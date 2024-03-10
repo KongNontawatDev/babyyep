@@ -1,4 +1,4 @@
-import { aref_ruqaa } from "@/app/layout";
+import { aref_ruqaa } from "@/utils/font";
 import React from "react";
 import ReadMoreReact from "read-more-react";
 import { Disclosure } from "@headlessui/react";

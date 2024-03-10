@@ -1,4 +1,4 @@
-import { aref_ruqaa } from "@/app/layout";
+import { aref_ruqaa } from "@/utils/font";
 import Carousel from "nuka-carousel";
 import React from "react";
 import {

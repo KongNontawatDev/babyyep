@@ -15,9 +15,9 @@ import Review from "@/components/Review";
 import React, { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { ToastContainer } from "react-toastify";
-import { aref_ruqaa } from "./layout";
 import Image from "next/image";
 import Banner3 from "@/components/home/Banner3";
+import { aref_ruqaa } from "@/utils/font";
 export default function Home() {
 	let [isOpenEtiquette, setIsOpenEtiquette] = useState(false);
 	let [isOpenService, setIsOpenService] = useState(false);

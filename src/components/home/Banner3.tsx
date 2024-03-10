@@ -1,5 +1,6 @@
 "use client";
-import { aref_ruqaa } from "@/app/layout";
+import { aref_ruqaa } from "@/utils/font";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -32,10 +33,12 @@ export default function Banner3() {
 					</div>
 
 					<div className="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2 h-[calc(100vh-72px)]">
-						<img
+						<Image
 							className="h-full  object-cover"
 							src="/img/banner2.png"
 							alt="Catalogue-pana.svg"
+							width={486}
+							height={840}
 						/>
 					</div>
 				</div>

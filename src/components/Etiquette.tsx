@@ -1,5 +1,5 @@
 "use client";
-import { aref_ruqaa } from "@/app/layout";
+import { aref_ruqaa } from "@/utils/font";
 import React, { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 
