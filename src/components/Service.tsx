@@ -1,10 +1,10 @@
 import { aref_ruqaa } from "@/utils/font";
-import React from "react";
-import ReadMoreReact from "read-more-react";
+import React, { useEffect } from "react";
 import { Disclosure } from "@headlessui/react";
 import CheckboxIcon from "./icon/checkbox";
 import Image from "next/image";
-
+import AOS from "aos";
+import ReactTypingEffect from "react-typing-effect";
 const items = [
 	{
 		title: "Full Girlfriend Experience",
@@ -39,6 +39,11 @@ const items = [
 ];
 
 export default function Service({setIsOpenServince}:{setIsOpenServince:any}) {
+		useEffect(() => {
+		AOS.init({
+			once: true,
+		});
+	}, []);
 	return (
 		<div
 			className="container max-w-[1200px] flex flex-col py-10 mx-auto space-y-6 lg:h-[32rem] lg:flex-row lg:items-center"
@@ -46,22 +51,29 @@ export default function Service({setIsOpenServince}:{setIsOpenServince:any}) {
 		>
 			<div className="w-full lg:w-1/2">
 				<div className="lg:max-w-lg">
-					<h1 className="text-3xl text-gray-800 dark:text-white lg:text-4xl uppercase tracking-widest font-[100]">
-						Services
+					<h1 data-aos="fade-up" className="text-3xl text-gray-800 dark:text-white lg:text-4xl uppercase tracking-widest font-[100]">
+						
+													<ReactTypingEffect
+							text={["Services"]}
+							eraseDelay={10000}
+							speed={300}
+							typingDelay={1000}
+						/>
 					</h1>
 
 					<p
+					data-aos="fade-right"
 						className={`${aref_ruqaa.className} mx-auto  text-gray-500 dark:text-gray-300`}
 					>
 						Duration 60 mins (1hr.) or 30 mins{" "}
 						<span className="read-more-button" onClick={()=>setIsOpenServince(true)}>Read More...</span>
 					</p>
 
-					<h3 className=" mt-2 text-gray-800 dark:text-white lg:text-lg uppercase tracking-widest font-[100]">
+					<h3 data-aos="fade-right" className=" mt-2 text-gray-800 dark:text-white lg:text-lg uppercase tracking-widest font-[100]">
 						Service List/ Extra services for the package
 					</h3>
 
-					<div className="flex items-center text-gray-800 -px-3 dark:text-gray-200 w-full">
+					<div data-aos="fade-right" className="flex items-center text-gray-800 -px-3 dark:text-gray-200 w-full">
 						<div className="">
 							{items.map((item: { title: string; detail: string }) => (
 								<Disclosure key={item.title}>
@@ -84,6 +96,7 @@ export default function Service({setIsOpenServince}:{setIsOpenServince:any}) {
 			</div>
 
 				<Image
+				data-aos="fade-left"
 					className="object-cover object-top lg:w-1/2 lg:mx-6 w-full h-96 lg:h-[36rem]"
 					src="/img/service.png"
 					alt="glasses photo"

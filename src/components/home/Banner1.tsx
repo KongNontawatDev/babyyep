@@ -2,14 +2,22 @@
 import { aref_ruqaa } from "@/utils/font";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-
+import React, { useEffect } from "react";
+import AOS from "aos";
+import ReactTypingEffect from 'react-typing-effect';
 export default function Banner1() {
+
+	useEffect(() => {
+		AOS.init({
+			once: true,
+		});
+	}, []);
+
 	return (
 		<div className="w-full h-[calc(100vh-72px)] " style={{background:"url('/img/bg1.png') no-repeat right top",backgroundSize:'100vw 100vh'}}>
 			<div className="container max-w-[1200px] mx-auto pt-8">
 				<div className="items-center lg:flex">
-					<div className="w-full lg:w-2/3">
+					<div data-aos="fade-right" className="w-full lg:w-2/3" >
 						<div className="lg:max-w-2xl">
 							<h1 
 								className="text-3xl lg:text-6xl text-gray-800 dark:text-whiteuppercase tracking-widest font-[100] uppercase text-center lg:text-start"
@@ -33,7 +41,7 @@ export default function Banner1() {
 						</div>
 					</div>
 
-					<div className="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/3 h-[calc(100vh-72px)]">
+					<div data-aos="fade-left" className="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/3 h-[calc(100vh-72px)]">
 						<Image
 							className="h-full  object-cover"
 							src="/img/banner1.png"

@@ -12,18 +12,26 @@ import Service from "@/components/Service";
 import FAQ from "@/components/FAQ";
 import Etiquette from "@/components/Etiquette";
 import Review from "@/components/Review";
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { ToastContainer } from "react-toastify";
 import Image from "next/image";
 import Banner3 from "@/components/home/Banner3";
 import { aref_ruqaa } from "@/utils/font";
 import Book from "@/components/Book";
+import AOS from "aos";
+
 export default function Home() {
 	let [isOpenEtiquette, setIsOpenEtiquette] = useState(false);
 	let [isOpenService, setIsOpenService] = useState(false);
 	let [isOpenGallary, setIsOpenGallary] = useState(false);
 	let [isOpenBook, setIsOpenBook] = useState(false);
+
+	useEffect(() => {
+		AOS.init({
+			once: true,
+		});
+	}, []);
 
 	return (
 		<>
@@ -489,30 +497,39 @@ export default function Home() {
 										>
 											SMS or WhatsApp
 										</p>
-										<p className={`${aref_ruqaa.className}  text-gray-500 mb-3`} >
-Please send the message for the services to notify and avoid invisible of your message.
-- Response your message as quickly as possible.
+										<p
+											className={`${aref_ruqaa.className}  text-gray-500 mb-3`}
+										>
+											Please send the message for the services to notify and
+											avoid invisible of your message. - Response your message
+											as quickly as possible.
 										</p>
-										<p className={`${aref_ruqaa.className}  text-gray-500 mb-3`} >
-With your hours purchase we provide the best experience with the best of our ability.
-Please inform for any special services you require.
+										<p
+											className={`${aref_ruqaa.className}  text-gray-500 mb-3`}
+										>
+											With your hours purchase we provide the best experience
+											with the best of our ability. Please inform for any
+											special services you require.
 										</p>
-										<p className={`${aref_ruqaa.className}  text-gray-500 mb-3`} >
-For first-time trial:
-We provide a special gentle service.
-Please kindly inform us of your concerns regarding the services.
-* Follow your instructions :3
+										<p
+											className={`${aref_ruqaa.className}  text-gray-500 mb-3`}
+										>
+											For first-time trial: We provide a special gentle service.
+											Please kindly inform us of your concerns regarding the
+											services. * Follow your instructions :3
 										</p>
-										<p className={`${aref_ruqaa.className} ms-5 text-gray-500 mb-3`} >
-- Example
-Hello, I would like to see you at 11.30am. for half an hour and Girlfriend experience
-Thanks Rob
+										<p
+											className={`${aref_ruqaa.className} ms-5 text-gray-500 mb-3`}
+										>
+											- Example Hello, I would like to see you at 11.30am. for
+											half an hour and Girlfriend experience Thanks Rob
 										</p>
-										<p className={`${aref_ruqaa.className} ms-5 text-gray-500 mb-3`} >
-- Hello Cartier, I saw your ad on adultwork. Do you have availability this evening? I
-am probably looking for 1 hour.
-I am a first timer so a bit nervous.
-Thanks Tim
+										<p
+											className={`${aref_ruqaa.className} ms-5 text-gray-500 mb-3`}
+										>
+											- Hello Cartier, I saw your ad on adultwork. Do you have
+											availability this evening? I am probably looking for 1
+											hour. I am a first timer so a bit nervous. Thanks Tim
 										</p>
 
 										<p

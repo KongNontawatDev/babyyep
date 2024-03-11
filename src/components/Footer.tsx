@@ -1,22 +1,33 @@
+"use client";
 import { aref_ruqaa } from "@/utils/font";
-import React from "react";
+import React, { useEffect } from "react";
 import { Instagram, MessageSquare, Send } from "react-feather";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import Link from "next/link";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from "next/navigation";
+import AOS from "aos";
+import ReactTypingEffect from "react-typing-effect";
 export default function Footer() {
 	const router = useRouter();
-
+	useEffect(() => {
+		AOS.init({
+			once: true,
+		});
+	}, []);
 	return (
 		<>
 			<section className="bg-white dark:bg-gray-900" id="#contact">
 				<div className="container max-w-[1200px] py-10 mx-auto">
-					<div className="text-center">
-
+					<div data-aos="fade-up" className="text-center">
 						<h1 className="mt-2 text-2xl text-gray-800 md:text-3xl dark:text-white uppercase tracking-widest font-[100]">
-						Contact us
+							
+														<ReactTypingEffect
+							text={["Contact us"]}
+							eraseDelay={10000}
+							speed={300}
+							typingDelay={1000}
+						/>
 						</h1>
 
 						<p
@@ -27,7 +38,12 @@ export default function Footer() {
 					</div>
 
 					<div className="grid grid-cols-1 gap-12 mt-10 md:grid-cols-2 lg:grid-cols-3">
-						<div onClick={()=>router.push('https://wa.me/message/2BCUIWKERU3DP1')} className="flex flex-col items-center justify-center text-center border p-3 shadow-sm rounded-lg hover:bg-[#FDF6E9] active:bg-[#FDF6E9]">
+						<div
+							onClick={() =>
+								router.push("https://wa.me/message/2BCUIWKERU3DP1")
+							}
+							className="flex flex-col items-center justify-center text-center border p-3 shadow-sm rounded-lg hover:bg-[#FDF6E9] active:bg-[#FDF6E9]"
+						>
 							<span className="p-3 text-gray-700 rounded-full bg-[#FDF6E9] dark:bg-gray-800">
 								<MessageSquare />
 							</span>
@@ -82,26 +98,31 @@ export default function Footer() {
 							</div>
 						</CopyToClipboard>
 
-						<div  onClick={()=>router.push('https://wa.me/message/2BCUIWKERU3DP1')}  className="flex flex-col items-center justify-center text-center  border p-3 shadow-sm rounded-lg hover:bg-[#FDF6E9] active:bg-[#FDF6E9]">
-								<span className="p-3 text-gray-700 rounded-full bg-[#FDF6E9] dark:bg-gray-800">
-									<Instagram />
-								</span>
+						<div
+							onClick={() =>
+								router.push("https://wa.me/message/2BCUIWKERU3DP1")
+							}
+							className="flex flex-col items-center justify-center text-center  border p-3 shadow-sm rounded-lg hover:bg-[#FDF6E9] active:bg-[#FDF6E9]"
+						>
+							<span className="p-3 text-gray-700 rounded-full bg-[#FDF6E9] dark:bg-gray-800">
+								<Instagram />
+							</span>
 
-								<h2
-									className={`${aref_ruqaa.className} mt-4 text-lg font-medium text-gray-800 dark:text-white`}
-								>
-									Follow IG
-								</h2>
-								<p
-									className={`${aref_ruqaa.className} mt-2 text-gray-500 dark:text-gray-400`}
-								>
-									Click to follow me on IG.
-								</p>
-								<p
-									className={`${aref_ruqaa.className} mt-2 text-gray-700 dark:text-blue-400`}
-								>
-									<a href="">A</a>
-								</p>
+							<h2
+								className={`${aref_ruqaa.className} mt-4 text-lg font-medium text-gray-800 dark:text-white`}
+							>
+								Follow IG
+							</h2>
+							<p
+								className={`${aref_ruqaa.className} mt-2 text-gray-500 dark:text-gray-400`}
+							>
+								Click to follow me on IG.
+							</p>
+							<p
+								className={`${aref_ruqaa.className} mt-2 text-gray-700 dark:text-blue-400`}
+							>
+								<a href="">A</a>
+							</p>
 						</div>
 					</div>
 				</div>
@@ -111,7 +132,12 @@ export default function Footer() {
 				<div className="container max-w-[1200px] py-4 mx-auto">
 					© 2024{" "}
 					<a href="" className="underline">
-						Kong Nontawat.
+						<ReactTypingEffect
+							text={["Kong Nontawat."]}
+							eraseDelay={10000}
+							speed={300}
+							typingDelay={1000}
+						/>
 					</a>{" "}
 					All rights reserved.
 				</div>

@@ -1,16 +1,32 @@
 "use client";
 import { aref_ruqaa } from "@/utils/font";
-import React, { Fragment, useState } from "react";
-import { Dialog, Transition } from "@headlessui/react";
-
-export default function Etiquette({setIsOpenEtiquette}:{setIsOpenEtiquette:any}) {
-
+import React, { useEffect } from "react";
+import AOS from "aos";
+import ReactTypingEffect from "react-typing-effect";
+export default function Etiquette({
+	setIsOpenEtiquette,
+}: {
+	setIsOpenEtiquette: any;
+}) {
+	useEffect(() => {
+		AOS.init({
+			once: true,
+		});
+	}, []);
 	return (
 		<>
 			<section className="bg-white dark:bg-gray-900 z-10">
 				<div className=" px-6 py-10 mx-auto">
-					<h1 className="text-2xl text-gray-800 lg:text-3xl dark:text-gray-600 uppercase tracking-widest font-[100]">
-						Etiquette
+					<h1
+						data-aos="fade-up"
+						className="text-2xl text-gray-800 lg:text-3xl dark:text-gray-600 uppercase tracking-widest font-[100]"
+					>
+						<ReactTypingEffect
+							text={["Etiquette"]}
+							eraseDelay={10000}
+							speed={300}
+							typingDelay={1000}
+						/>
 					</h1>
 
 					<main className="relative z-10 w-full md:flex md:items-center mt-3">
@@ -18,20 +34,19 @@ export default function Etiquette({setIsOpenEtiquette}:{setIsOpenEtiquette:any})
 
 						<div className="w-full p-6 bg-[#FDF6E9] md:flex md:items-center md:bg-transparent md:p-0 lg:px-12 md:justify-evenly">
 							<center>
-								<div className="max-w-lg">
-								<video muted autoPlay loop style={{ width: "100%" }}>
-									<source type="video/mp4" src="/img/video.mp4" />
-								</video>
-							</div>
+								<div data-aos="fade-right" className="max-w-lg">
+									<video muted autoPlay loop style={{ width: "100%" }}>
+										<source type="video/mp4" src="/img/video.mp4" />
+									</video>
+								</div>
 							</center>
 
-							<div className="mt-2 md:mx-6">
+							<div className="mt-2 md:mx-6" data-aos="fade-left">
 								<p
 									className={`tracking-widest text-2xl font-medium uppercase  mt-4 text-gray-700 mb-2 `}
 								>
 									Etiquette
 								</p>
-
 
 								<p
 									className={`${aref_ruqaa.className} text-xl font-medium  mt-4 leading-relaxed text-gray-600 mb-2 `}

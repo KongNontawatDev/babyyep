@@ -1,15 +1,29 @@
+'use client'
 import { aref_ruqaa } from "@/utils/font";
 import { Disclosure } from "@headlessui/react";
 import { ChevronUp } from "react-feather";
-
+import AOS from "aos";
+import { useEffect } from "react";
+import ReactTypingEffect from "react-typing-effect";
 export default function FAQ() {
+		useEffect(() => {
+		AOS.init({
+			once: true,
+		});
+	}, []);
 	return (
 		<div className="container max-w-[1200px] bg-white py-10"  id="#faq">
-			<h1 className="text-2xl text-center text-gray-800 lg:text-3xl dark:text-white uppercase tracking-widest font-[100]">
-				FAQ
+			<h1 data-aos="fade-up" className="text-2xl text-center text-gray-800 lg:text-3xl dark:text-white uppercase tracking-widest font-[100]">
+				
+											<ReactTypingEffect
+							text={["FAQ"]}
+							eraseDelay={10000}
+							speed={300}
+							typingDelay={1000}
+						/>
 			</h1>
 
-			<Disclosure as="div" className="mt-2">
+			<Disclosure data-aos="fade-down" as="div" className="mt-2">
 				{({ open }) => (
 					<>
 						<Disclosure.Button className="flex w-full justify-between bg-[#FDF6E9] px-4 py-3 text-left font-medium text-black hover:bg-[#e2d5b9] focus:outline-none focus-visible:ring focus-visible:ring-[#e2d5b9]">
@@ -33,7 +47,7 @@ export default function FAQ() {
 				)}
 			</Disclosure>
 
-			<Disclosure as="div" className="mt-2">
+			<Disclosure data-aos="fade-down" as="div" className="mt-2">
 				{({ open }) => (
 					<>
 						<Disclosure.Button className="flex w-full justify-between bg-[#FDF6E9] px-4 py-3 text-left font-medium text-black hover:bg-[#e2d5b9] focus:outline-none focus-visible:ring focus-visible:ring-[#e2d5b9]">
@@ -62,7 +76,7 @@ export default function FAQ() {
 				)}
 			</Disclosure>
 
-			<Disclosure as="div" className="mt-2">
+			<Disclosure data-aos="fade-down" as="div" className="mt-2">
 				{({ open }) => (
 					<>
 						<Disclosure.Button className="flex w-full justify-between bg-[#FDF6E9] px-4 py-3 text-left font-medium text-black hover:bg-[#e2d5b9] focus:outline-none focus-visible:ring focus-visible:ring-[#e2d5b9]">
@@ -88,7 +102,7 @@ I always ask for the same in return.
 				)}
 			</Disclosure>
 
-			<Disclosure as="div" className="mt-2">
+			<Disclosure data-aos="fade-down" as="div" className="mt-2">
 				{({ open }) => (
 					<>
 						<Disclosure.Button className="flex w-full justify-between bg-[#FDF6E9] px-4 py-3 text-left font-medium text-black hover:bg-[#e2d5b9] focus:outline-none focus-visible:ring focus-visible:ring-[#e2d5b9]">
@@ -109,7 +123,7 @@ anybody that asks will be blocked.
 				)}
 			</Disclosure>
 
-			<Disclosure as="div" className="mt-2">
+			<Disclosure data-aos="fade-down" as="div" className="mt-2">
 				{({ open }) => (
 					<>
 						<Disclosure.Button className="flex w-full justify-between bg-[#FDF6E9] px-4 py-3 text-left font-medium text-black hover:bg-[#e2d5b9] focus:outline-none focus-visible:ring focus-visible:ring-[#e2d5b9]">
@@ -132,7 +146,7 @@ circumstances. Donation amount will remain the same.
 				)}
 			</Disclosure>
 
-			<Disclosure as="div" className="mt-2">
+			<Disclosure data-aos="fade-down" as="div" className="mt-2">
 				{({ open }) => (
 					<>
 						<Disclosure.Button className="flex w-full justify-between bg-[#FDF6E9] px-4 py-3 text-left font-medium text-black hover:bg-[#e2d5b9] focus:outline-none focus-visible:ring focus-visible:ring-[#e2d5b9]">
@@ -151,7 +165,7 @@ you are hygienic.</Disclosure.Panel>
 				)}
 			</Disclosure>
 
-			<Disclosure as="div" className="mt-2">
+			<Disclosure data-aos="fade-down" as="div" className="mt-2">
 				{({ open }) => (
 					<>
 						<Disclosure.Button className="flex w-full justify-between bg-[#FDF6E9] px-4 py-3 text-left font-medium text-black hover:bg-[#e2d5b9] focus:outline-none focus-visible:ring focus-visible:ring-[#e2d5b9]">

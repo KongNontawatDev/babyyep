@@ -25,10 +25,12 @@
     "sharp": "^0.33.2"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.7",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-copy-to-clipboard": "^5.0.7",
     "@types/react-dom": "^18",
+    "@types/react-typing-effect": "^2.0.7",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.1.3",

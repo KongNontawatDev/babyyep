@@ -1,6 +1,6 @@
-import { aref_ruqaa } from "@/utils/font";
+'use client'
 import Carousel from "nuka-carousel";
-import React from "react";
+import React, { useEffect } from "react";
 import {
 	renderCenterLeftControls,
 	renderCenterRightControls,
@@ -8,13 +8,25 @@ import {
 import Review1 from "./review/Review1";
 import Review2 from "./review/Review2";
 import Review3 from "./review/Review3";
-
+import AOS from "aos";
+import ReactTypingEffect from "react-typing-effect";
 export default function Review() {
+		useEffect(() => {
+		AOS.init({
+			once: true,
+		});
+	}, []);
 	return (
 		<section className="bg-white dark:bg-gray-900 py-10"  id="#review">
 			<div className="container max-w-[1200px] mx-auto">
-				<h1 className="text-2xl text-center text-gray-800 lg:text-3xl dark:text-white uppercase tracking-widest font-[100]">
-					REVIEW
+				<h1 data-aos="fade-up" className="text-2xl text-center text-gray-800 lg:text-3xl dark:text-white uppercase tracking-widest font-[100]">
+					
+												<ReactTypingEffect
+							text={["REVIEW"]}
+							eraseDelay={10000}
+							speed={300}
+							typingDelay={1000}
+						/>
 				</h1>
 
 				{/* <p
@@ -31,9 +43,9 @@ export default function Review() {
 				renderCenterLeftControls={renderCenterLeftControls}
 				renderCenterRightControls={renderCenterRightControls}
 			>
-				<Review1 />
-				<Review2 />
-				<Review3 />
+				<Review1 data-aos="flip-up" />
+				<Review2 data-aos="flip-up" />
+				<Review3 data-aos="flip-up" />
 			</Carousel>
 		</section>
 	);
