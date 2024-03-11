@@ -66,7 +66,7 @@ export default function Footer() {
 						</div>
 
 						<CopyToClipboard
-							text="Hello!"
+							text="+44 7926 627778"
 							onCopy={() =>
 								toast("Copy SMS Tel to Clipboard!!", {
 									position: "bottom-center",
@@ -93,7 +93,7 @@ export default function Footer() {
 								<p
 									className={`${aref_ruqaa.className} mt-2 text-gray-700 dark:text-blue-400`}
 								>
-									0xx-xxx-xxxx
+									+44 7926 627778
 								</p>
 							</div>
 						</CopyToClipboard>

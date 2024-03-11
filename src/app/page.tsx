@@ -14,7 +14,7 @@ import Etiquette from "@/components/Etiquette";
 import Review from "@/components/Review";
 import React, { Fragment, useEffect, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import Image from "next/image";
 import Banner3 from "@/components/home/Banner3";
 import { aref_ruqaa } from "@/utils/font";
@@ -23,6 +23,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
 import { Phone } from "react-feather";
+import CopyToClipboard from "react-copy-to-clipboard";
 export default function Home() {
 	let [isOpenEtiquette, setIsOpenEtiquette] = useState(false);
 	let [isOpenService, setIsOpenService] = useState(false);
@@ -48,6 +49,8 @@ export default function Home() {
 				<Banner2 />
 				<Banner3 />
 			</Carousel>
+
+			
 
 			<Gallary setIsOpenGallary={setIsOpenGallary} />
 			<Transition appear show={isOpenGallary} as={Fragment}>
@@ -575,19 +578,36 @@ export default function Home() {
 				</Dialog>
 			</Transition>
 
-			<div style={{ position: "fixed", bottom: 80, right: -40 }}>
-				<Link
-				href={"https://wa.me/message/2BCUIWKERU3DP1"}
-				
-			>
-				<button
-					type="button"
-					className="inline-flex w-full justify-center -rotate-90 align-middle bg-[#E3C797] px-3 py-2 text-sm text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:w-auto"
+			<div style={{ position: "fixed", bottom: 250, right: -50,zIndex:10000000 }}>
+				<CopyToClipboard
+					text="+44 7926 627778!"
+					onCopy={() =>
+						toast("Copy SMS Number to Clipboard!!", {
+							position: "bottom-center",
+							hideProgressBar: true,
+							autoClose: 1000,
+						})
+					}
 				>
-					<Phone size={18} className="text-gray-500 me-2" />
-					WhatsApp
-				</button>
-			</Link>
+					<button
+						type="button"
+						className="inline-flex w-full justify-center -rotate-90 align-middle bg-[#E3C797] px-3 py-2 text-sm text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:w-auto"
+					>
+						+44 7926 627778
+					</button>
+				</CopyToClipboard>
+			</div>
+
+			<div style={{ position: "fixed", bottom: 80, right: -40 ,zIndex:10000000}}>
+				<Link href={"https://wa.me/message/2BCUIWKERU3DP1"}>
+					<button
+						type="button"
+						className="inline-flex w-full justify-center -rotate-90 align-middle bg-[#E3C797] px-3 py-2 text-sm text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:w-auto"
+					>
+						<Phone size={18} className="text-gray-500 me-2" />
+						WhatsApp
+					</button>
+				</Link>
 			</div>
 		</>
 	);
