@@ -14,20 +14,15 @@ export default function Footer() {
 			<section className="bg-white dark:bg-gray-900" id="#contact">
 				<div className="container max-w-[1200px] py-10 mx-auto">
 					<div className="text-center">
-						<p
-							className={`${aref_ruqaa.className} text-[#ddbf8c] uppercase tracking-widest font-[100]`}
-						>
-							Contact us
-						</p>
 
 						<h1 className="mt-2 text-2xl text-gray-800 md:text-3xl dark:text-white uppercase tracking-widest font-[100]">
-							How To Book?
+						Contact us
 						</h1>
 
 						<p
 							className={`${aref_ruqaa.className} mt-3 text-gray-500 dark:text-gray-400`}
 						>
-							Our friendly team is always here to chat.
+							Book via whatspp chat or sms.
 						</p>
 					</div>
 

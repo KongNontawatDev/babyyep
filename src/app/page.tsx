@@ -18,10 +18,13 @@ import { ToastContainer } from "react-toastify";
 import Image from "next/image";
 import Banner3 from "@/components/home/Banner3";
 import { aref_ruqaa } from "@/utils/font";
+import Book from "@/components/Book";
 export default function Home() {
 	let [isOpenEtiquette, setIsOpenEtiquette] = useState(false);
 	let [isOpenService, setIsOpenService] = useState(false);
 	let [isOpenGallary, setIsOpenGallary] = useState(false);
+	let [isOpenBook, setIsOpenBook] = useState(false);
+
 	return (
 		<>
 			<ToastContainer />
@@ -33,7 +36,7 @@ export default function Home() {
 			>
 				<Banner1 />
 				<Banner2 />
-				<Banner3/>
+				<Banner3 />
 			</Carousel>
 
 			<Gallary setIsOpenGallary={setIsOpenGallary} />
@@ -442,6 +445,116 @@ export default function Home() {
 			<Review />
 
 			<FAQ />
+
+			<Book setIsOpenBook={setIsOpenBook} />
+			<Transition appear show={isOpenBook} as={Fragment}>
+				<Dialog
+					as="div"
+					className="relative z-20"
+					onClose={() => setIsOpenBook(false)}
+				>
+					<Transition.Child
+						as={Fragment}
+						enter="ease-out duration-300"
+						enterFrom="opacity-0"
+						enterTo="opacity-100"
+						leave="ease-in duration-200"
+						leaveFrom="opacity-100"
+						leaveTo="opacity-0"
+					>
+						<div className="fixed inset-0 bg-black/25" />
+					</Transition.Child>
+
+					<div className="fixed inset-0 overflow-y-auto">
+						<div className="flex min-h-full items-center justify-center p-4 text-center">
+							<Transition.Child
+								as={Fragment}
+								enter="ease-out duration-300"
+								enterFrom="opacity-0 scale-95"
+								enterTo="opacity-100 scale-100"
+								leave="ease-in duration-200"
+								leaveFrom="opacity-100 scale-100"
+								leaveTo="opacity-0 scale-95"
+							>
+								<Dialog.Panel className="w-full max-w-2xl transform overflow-hidden bg-white p-6 text-left align-middle shadow-xl transition-all">
+									<Dialog.Title
+										as="h3"
+										className="text-xl text-gray-800 dark:text-gray-600 uppercase tracking-widest font-[100]"
+									>
+										How to Book
+									</Dialog.Title>
+									<div className="mt-2">
+										<p
+											className={`${aref_ruqaa.className} text-lg text-center text-gray-500 mb-3`}
+										>
+											SMS or WhatsApp
+										</p>
+										<p className={`${aref_ruqaa.className}  text-gray-500 mb-3`} >
+Please send the message for the services to notify and avoid invisible of your message.
+- Response your message as quickly as possible.
+										</p>
+										<p className={`${aref_ruqaa.className}  text-gray-500 mb-3`} >
+With your hours purchase we provide the best experience with the best of our ability.
+Please inform for any special services you require.
+										</p>
+										<p className={`${aref_ruqaa.className}  text-gray-500 mb-3`} >
+For first-time trial:
+We provide a special gentle service.
+Please kindly inform us of your concerns regarding the services.
+* Follow your instructions :3
+										</p>
+										<p className={`${aref_ruqaa.className} ms-5 text-gray-500 mb-3`} >
+- Example
+Hello, I would like to see you at 11.30am. for half an hour and Girlfriend experience
+Thanks Rob
+										</p>
+										<p className={`${aref_ruqaa.className} ms-5 text-gray-500 mb-3`} >
+- Hello Cartier, I saw your ad on adultwork. Do you have availability this evening? I
+am probably looking for 1 hour.
+I am a first timer so a bit nervous.
+Thanks Tim
+										</p>
+
+										<p
+											className={`${aref_ruqaa.className} text-lg text-center text-gray-500 mb-3`}
+										>
+											Booking and cancellation
+										</p>
+										<p
+											className={`${aref_ruqaa.className}  text-gray-500 mb-2`}
+										>
+											Carefully pay attention to all requests and details. Free
+											style working as your desire. Within the time provided, we
+											guarantee by the satisfaction.
+										</p>
+										<p
+											className={`${aref_ruqaa.className}  text-gray-500 mb-2`}
+										>
+											Trustworthy services, no customer information disclosed.
+											remove evidence after job, no data backup.
+										</p>
+										<p
+											className={`${aref_ruqaa.className}  text-gray-500 mb-2`}
+										>
+											Your safety and happiness are our number one priority.
+										</p>
+									</div>
+
+									<div className="mt-4">
+										<button
+											type="button"
+											className="inline-flex w-full justify-center align-middle bg-white px-4 py-2 text-sm text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:w-auto"
+											onClick={() => setIsOpenBook(false)}
+										>
+											Close
+										</button>
+									</div>
+								</Dialog.Panel>
+							</Transition.Child>
+						</div>
+					</div>
+				</Dialog>
+			</Transition>
 		</>
 	);
 }
