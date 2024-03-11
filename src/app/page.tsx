@@ -20,7 +20,7 @@ import Banner3 from "@/components/home/Banner3";
 import { aref_ruqaa } from "@/utils/font";
 import Book from "@/components/Book";
 import AOS from "aos";
-
+import 'aos/dist/aos.css';
 export default function Home() {
 	let [isOpenEtiquette, setIsOpenEtiquette] = useState(false);
 	let [isOpenService, setIsOpenService] = useState(false);
