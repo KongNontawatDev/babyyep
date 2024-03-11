@@ -20,7 +20,9 @@ import Banner3 from "@/components/home/Banner3";
 import { aref_ruqaa } from "@/utils/font";
 import Book from "@/components/Book";
 import AOS from "aos";
-import 'aos/dist/aos.css';
+import "aos/dist/aos.css";
+import Link from "next/link";
+import { Phone } from "react-feather";
 export default function Home() {
 	let [isOpenEtiquette, setIsOpenEtiquette] = useState(false);
 	let [isOpenService, setIsOpenService] = useState(false);
@@ -572,6 +574,21 @@ export default function Home() {
 					</div>
 				</Dialog>
 			</Transition>
+
+			<div style={{ position: "fixed", bottom: 80, right: -40 }}>
+				<Link
+				href={"https://wa.me/message/2BCUIWKERU3DP1"}
+				
+			>
+				<button
+					type="button"
+					className="inline-flex w-full justify-center -rotate-90 align-middle bg-[#E3C797] px-3 py-2 text-sm text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:w-auto"
+				>
+					<Phone size={18} className="text-gray-500 me-2" />
+					WhatsApp
+				</button>
+			</Link>
+			</div>
 		</>
 	);
 }

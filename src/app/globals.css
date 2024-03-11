@@ -9,6 +9,10 @@
   --backgroundSecondary: 255, 255, 255;
 }
 
+.body {
+  position: relative;
+}
+
 .read-more-button {
   text-decoration: underline;
   color: #dbac5a;
