@@ -106,13 +106,8 @@ export default function Footer() {
 			<footer className="bg-gradient-to-r from-[#FDF6E9] to-[#E1D7C1]">
 				<div className="container max-w-[1200px] py-4 mx-auto">
 					© 2024{" "}
-					<a href="" className="underline">
-						<ReactTypingEffect
-							text={["Kong Nontawat."]}
-							eraseDelay={10000}
-							speed={300}
-							typingDelay={1000}
-						/>
+					<a href="https://www.facebook.com/kongnontawat.dev" className="underline" target="_blank">
+						Kong Nontawat.
 					</a>{" "}
 					All rights reserved.
 				</div>
