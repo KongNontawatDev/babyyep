@@ -17,7 +17,7 @@ export default function Review() {
 		});
 	}, []);
 	return (
-		<section className="bg-white dark:bg-gray-900 py-10"  id="#review">
+		<section className="bg-white dark:bg-gray-900 py-10"  id="review">
 			<div className="container max-w-[1200px] mx-auto">
 				<h1 data-aos="fade-up" className="text-2xl text-center text-gray-800 lg:text-3xl dark:text-white uppercase tracking-widest font-[100]">
 					

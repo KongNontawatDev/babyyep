@@ -17,7 +17,7 @@ export default function Footer() {
 	}, []);
 	return (
 		<>
-			<section className="bg-white dark:bg-gray-900" id="#contact">
+			<section className="bg-white dark:bg-gray-900" id="contact">
 				<div className="container max-w-[1200px] py-10 mx-auto">
 					<div data-aos="fade-up" className="text-center">
 						<h1 className="mt-2 text-2xl text-gray-800 md:text-3xl dark:text-white uppercase tracking-widest font-[100]">
@@ -37,7 +37,7 @@ export default function Footer() {
 						</p>
 					</div>
 
-					<div className="grid grid-cols-1 gap-12 mt-10 md:grid-cols-2 lg:grid-cols-3">
+					<div className="grid grid-cols-1 gap-12 mt-10 md:grid-cols-2">
 						<div
 							onClick={() =>
 								router.push("https://wa.me/message/2BCUIWKERU3DP1")
@@ -98,32 +98,7 @@ export default function Footer() {
 							</div>
 						</CopyToClipboard>
 
-						<div
-							onClick={() =>
-								router.push("https://wa.me/message/2BCUIWKERU3DP1")
-							}
-							className="flex flex-col items-center justify-center text-center  border p-3 shadow-sm rounded-lg hover:bg-[#FDF6E9] active:bg-[#FDF6E9]"
-						>
-							<span className="p-3 text-gray-700 rounded-full bg-[#FDF6E9] dark:bg-gray-800">
-								<Instagram />
-							</span>
-
-							<h2
-								className={`${aref_ruqaa.className} mt-4 text-lg font-medium text-gray-800 dark:text-white`}
-							>
-								Follow IG
-							</h2>
-							<p
-								className={`${aref_ruqaa.className} mt-2 text-gray-500 dark:text-gray-400`}
-							>
-								Click to follow me on IG.
-							</p>
-							<p
-								className={`${aref_ruqaa.className} mt-2 text-gray-700 dark:text-blue-400`}
-							>
-								<a href="">A</a>
-							</p>
-						</div>
+						
 					</div>
 				</div>
 			</section>

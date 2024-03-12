@@ -9,7 +9,11 @@
   --backgroundSecondary: 255, 255, 255;
 }
 
-.body {
+html,body {
+  scroll-behavior: smooth;
+}
+
+body {
   position: relative;
 }
 

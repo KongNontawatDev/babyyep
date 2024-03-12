@@ -12,7 +12,7 @@ export default function FAQ() {
 		});
 	}, []);
 	return (
-		<div className="container max-w-[1200px] bg-white py-10"  id="#faq">
+		<div className="container max-w-[1200px] bg-white py-10"  id="faq">
 			<h1 data-aos="fade-up" className="text-2xl text-center text-gray-800 lg:text-3xl dark:text-white uppercase tracking-widest font-[100]">
 				
 											<ReactTypingEffect

@@ -5,6 +5,7 @@ import CheckboxIcon from "./icon/checkbox";
 import Image from "next/image";
 import AOS from "aos";
 import ReactTypingEffect from "react-typing-effect";
+import { ChevronRight } from "react-feather";
 const items = [
 	{
 		title: "Full Girlfriend Experience",
@@ -38,8 +39,12 @@ const items = [
 	},
 ];
 
-export default function Service({setIsOpenServince}:{setIsOpenServince:any}) {
-		useEffect(() => {
+export default function Service({
+	setIsOpenServince,
+}: {
+	setIsOpenServince: any;
+}) {
+	useEffect(() => {
 		AOS.init({
 			once: true,
 		});
@@ -47,13 +52,15 @@ export default function Service({setIsOpenServince}:{setIsOpenServince:any}) {
 	return (
 		<div
 			className="container max-w-[1200px] flex flex-col py-10 mx-auto space-y-6 lg:h-[32rem] lg:flex-row lg:items-center"
-			id="#service"
+			id="service"
 		>
 			<div className="w-full lg:w-1/2">
 				<div className="lg:max-w-lg">
-					<h1 data-aos="fade-up" className="text-3xl text-gray-800 dark:text-white lg:text-4xl uppercase tracking-widest font-[100]">
-						
-													<ReactTypingEffect
+					<h1
+						data-aos="fade-up"
+						className="text-3xl text-gray-800 dark:text-white lg:text-4xl uppercase tracking-widest font-[100]"
+					>
+						<ReactTypingEffect
 							text={["Services"]}
 							eraseDelay={10000}
 							speed={300}
@@ -62,32 +69,53 @@ export default function Service({setIsOpenServince}:{setIsOpenServince:any}) {
 					</h1>
 
 					<p
-					data-aos="fade-right"
+						data-aos="fade-right"
 						className={`${aref_ruqaa.className} mx-auto  text-gray-500 dark:text-gray-300`}
 					>
 						Duration 60 mins (1hr.) or 30 mins{" "}
-						<span className="read-more-button" onClick={()=>setIsOpenServince(true)}>Read More...</span>
+						<span
+							className="read-more-button"
+							onClick={() => setIsOpenServince(true)}
+						>
+							Read More...
+						</span>
 					</p>
 
-					<h3 data-aos="fade-right" className=" mt-2 text-gray-800 dark:text-white lg:text-lg uppercase tracking-widest font-[100]">
+					<h3
+						data-aos="fade-right"
+						className=" mt-2 text-gray-800 dark:text-white lg:text-lg uppercase tracking-widest font-[100]"
+					>
 						Service List/ Extra services for the package
 					</h3>
 
-					<div data-aos="fade-right" className="flex items-center text-gray-800 -px-3 dark:text-gray-200 w-full">
-						<div className="">
+					<div
+						data-aos="fade-right"
+						className="flex items-center text-gray-800 -px-3 dark:text-gray-200 w-full"
+					>
+						<div className="w-full">
 							{items.map((item: { title: string; detail: string }) => (
 								<Disclosure key={item.title}>
-									<Disclosure.Button
-										className={`${aref_ruqaa.className} mx-3 py-2 flex`}
-									>
-										<CheckboxIcon />
-										<span className="ms-1">{item.title} <span className="read-more-button">Read More...</span></span>
-									</Disclosure.Button>
-									<Disclosure.Panel
-										className={`${aref_ruqaa.className} text-gray-500 -mt-2`}
-									>
-										{item.detail}
-									</Disclosure.Panel>
+									{({ open }) => (
+										<>
+											<Disclosure.Button
+												className={`${aref_ruqaa.className} mx-3 py-2 flex w-full`}
+											>
+												<CheckboxIcon />
+												<span className="w-full ms-1 flex justify-between align-middle">
+													{item.title}
+													{/* <span className="read-more-button" style={{fontSize:12}}>Read More...</span> */}
+													<ChevronRight
+														className={open ? "text-gray-500 rotate-90 transform" : "text-gray-500"}
+													/>
+												</span>
+											</Disclosure.Button>
+											<Disclosure.Panel
+												className={`${aref_ruqaa.className} text-gray-500 -mt-2`}
+											>
+												{item.detail}
+											</Disclosure.Panel>
+										</>
+									)}
 								</Disclosure>
 							))}
 						</div>
@@ -95,14 +123,14 @@ export default function Service({setIsOpenServince}:{setIsOpenServince:any}) {
 				</div>
 			</div>
 
-				<Image
+			<Image
 				data-aos="fade-left"
-					className="object-cover object-top lg:w-1/2 lg:mx-6 w-full h-96 lg:h-[36rem]"
-					src="/img/service.png"
-					alt="glasses photo"
-					width={570}
-					height={580}
-				/>
+				className="object-cover object-top lg:w-1/2 lg:mx-6 w-full h-96 lg:h-[36rem]"
+				src="/img/service.png"
+				alt="glasses photo"
+				width={570}
+				height={580}
+			/>
 		</div>
 	);
 }

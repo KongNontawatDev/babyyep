@@ -11,7 +11,7 @@ export default function Navbar() {
 		? "translate-x-0 opacity-100"
 		: "opacity-0 -translate-x-full";
 	return (
-		<nav className="relative bg-transparent dark:bg-gray-800">
+		<nav className="relative bg-transparent dark:bg-gray-800" id="home">
 			<div className="container max-w-[1200px] px-6 md:px-0 py-4 mx-auto md:flex md:justify-between md:items-center">
 				<div className="flex items-center justify-between">
 					<a href="#">

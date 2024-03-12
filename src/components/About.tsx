@@ -11,7 +11,7 @@ export default function About() {
 		});
 	}, []);
 	return (
-		<section className="bg-white dark:bg-gray-900" id="#about">
+		<section className="bg-white dark:bg-gray-900" id="about">
 			<div className="container max-w-[1200px] py-10 mx-auto">
 				<div  className="lg:-mx-6 lg:flex lg:items-center">
 					<Image

@@ -68,7 +68,7 @@ export default function Home() {
 						leaveFrom="opacity-100"
 						leaveTo="opacity-0"
 					>
-						<div className="fixed inset-0 bg-black/25" />
+						<div className="fixed inset-0 bg-black/50 backdrop-blur" />
 					</Transition.Child>
 
 					<div className="fixed inset-0 overflow-y-auto">
@@ -96,7 +96,9 @@ export default function Home() {
 												src={"/img/gallary1.png"}
 												alt=""
 												width={350}
-												height={380}
+												height={400}
+												className="max-h-[400px] object-cover object-top"
+												data-aos="flip-left"
 											/>
 										</center>
 
@@ -105,7 +107,9 @@ export default function Home() {
 												src={"/img/gallary2.png"}
 												alt=""
 												width={350}
-												height={380}
+												height={400}
+												className="max-h-[400px] object-cover object-top"
+												data-aos="flip-left"
 											/>
 										</center>
 
@@ -114,7 +118,9 @@ export default function Home() {
 												src={"/img/gallary3.png"}
 												alt=""
 												width={350}
-												height={380}
+												height={400}
+												className="max-h-[400px] object-cover object-top"
+												data-aos="flip-left"
 											/>
 										</center>
 										<center>
@@ -122,7 +128,9 @@ export default function Home() {
 												src={"/img/gallary4.png"}
 												alt=""
 												width={350}
-												height={380}
+												height={400}
+												className="max-h-[400px] object-cover object-top"
+												data-aos="flip-left"
 											/>
 										</center>
 
@@ -131,7 +139,9 @@ export default function Home() {
 												src={"/img/gallary5.png"}
 												alt=""
 												width={350}
-												height={380}
+												height={400}
+												className="max-h-[400px] object-cover object-top"
+												data-aos="flip-left"
 											/>
 										</center>
 
@@ -140,7 +150,9 @@ export default function Home() {
 												src={"/img/gallary6.png"}
 												alt=""
 												width={350}
-												height={380}
+												height={400}
+												className="max-h-[400px] object-cover object-top"
+												data-aos="flip-left"
 											/>
 										</center>
 									</div>
@@ -179,7 +191,7 @@ export default function Home() {
 						leaveFrom="opacity-100"
 						leaveTo="opacity-0"
 					>
-						<div className="fixed inset-0 bg-black/25" />
+						<div className="fixed inset-0 bg-black/50 backdrop-blur" />
 					</Transition.Child>
 
 					<div className="fixed inset-0 overflow-y-auto">
@@ -359,7 +371,7 @@ export default function Home() {
 						leaveFrom="opacity-100"
 						leaveTo="opacity-0"
 					>
-						<div className="fixed inset-0 bg-black/25" />
+						<div className="fixed inset-0 bg-black/50 backdrop-blur" />
 					</Transition.Child>
 
 					<div className="fixed inset-0 overflow-y-auto">
@@ -475,7 +487,7 @@ export default function Home() {
 						leaveFrom="opacity-100"
 						leaveTo="opacity-0"
 					>
-						<div className="fixed inset-0 bg-black/25" />
+						<div className="fixed inset-0 bg-black/50 backdrop-blur" />
 					</Transition.Child>
 
 					<div className="fixed inset-0 overflow-y-auto">
