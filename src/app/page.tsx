@@ -24,6 +24,7 @@ import "aos/dist/aos.css";
 import Link from "next/link";
 import { Phone } from "react-feather";
 import CopyToClipboard from "react-copy-to-clipboard";
+import Head from "next/head";
 export default function Home() {
 	let [isOpenEtiquette, setIsOpenEtiquette] = useState(false);
 	let [isOpenService, setIsOpenService] = useState(false);
@@ -37,7 +38,7 @@ export default function Home() {
 	}, []);
 
 	return (
-		<>
+		<div>
 			<ToastContainer />
 			{/* Banner */}
 			<Carousel
@@ -621,6 +622,6 @@ export default function Home() {
 					</button>
 				</Link>
 			</div>
-		</>
+		</div>
 	);
 }
