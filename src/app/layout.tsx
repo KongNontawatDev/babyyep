@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { roboto } from "@/utils/font";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 import Head from "next/head";
 import { Metadata } from 'next';
  
@@ -37,6 +38,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 		<SpeedInsights/>
+		<Analytics/>
 			<body
 				className={`${roboto.className}`}
 				x-data={{ open: true, darkMode: false }}
