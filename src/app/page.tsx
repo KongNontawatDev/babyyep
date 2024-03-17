@@ -51,8 +51,6 @@ export default function Home() {
 				<Banner3 />
 			</Carousel>
 
-			
-
 			<Gallary setIsOpenGallary={setIsOpenGallary} />
 			<Transition appear show={isOpenGallary} as={Fragment}>
 				<Dialog
@@ -86,9 +84,9 @@ export default function Home() {
 								<Dialog.Panel className="w-full max-w-6xl transform overflow-hidden bg-white p-6 text-left align-middle shadow-xl transition-all">
 									<Dialog.Title
 										as="h3"
-										className="text-xl text-gray-800 dark:text-gray-600 uppercase tracking-widest font-[100]"
+										className="text-xl text-gray-800 dark:text-gray-600 uppercase tracking-widest font-bold underline"
 									>
-										Gallary
+										GALLERY
 									</Dialog.Title>
 
 									<div className="grid grid-cols-1 gap-8 mt-2 xl:mt-6 xl:gap-12 md:grid-cols-2 xl:grid-cols-3 ">
@@ -209,7 +207,7 @@ export default function Home() {
 								<Dialog.Panel className="w-full max-w-2xl transform overflow-hidden bg-white p-6 text-left align-middle shadow-xl transition-all">
 									<Dialog.Title
 										as="h3"
-										className="text-xl text-gray-800 dark:text-gray-600 uppercase tracking-widest font-[100]"
+										className="text-xl text-gray-800 dark:text-gray-600 uppercase tracking-widest font-bold underline"
 									>
 										Servinces
 									</Dialog.Title>
@@ -389,7 +387,7 @@ export default function Home() {
 								<Dialog.Panel className="w-full max-w-2xl transform overflow-hidden bg-white p-6 text-left align-middle shadow-xl transition-all">
 									<Dialog.Title
 										as="h3"
-										className="text-xl text-gray-800 dark:text-gray-600 uppercase tracking-widest font-[100]"
+										className="text-xl text-gray-800 dark:text-gray-600 uppercase tracking-widest font-bold underline"
 									>
 										Etiquette
 									</Dialog.Title>
@@ -439,16 +437,14 @@ export default function Home() {
 										<p
 											className={`${aref_ruqaa.className}  text-gray-500 mb-3`}
 										>
-											We do not expect to negotiate with the price of service,
-											and we do not welcome a customer who does not pay the
-											price fully.
+											This is a luxury experience I provide so Prices are the BEST and
+NON negotiable, you
 										</p>
 
 										<p
 											className={`${aref_ruqaa.className}  text-gray-500 mb-3`}
 										>
-											The quality you got is worth it. Please understand and do
-											not take advantage of our work hard. A
+											cant get a Rolls Royce Cullinan for the price of a IPhone . 
 										</p>
 									</div>
 
@@ -505,7 +501,7 @@ export default function Home() {
 								<Dialog.Panel className="w-full max-w-2xl transform overflow-hidden bg-white p-6 text-left align-middle shadow-xl transition-all">
 									<Dialog.Title
 										as="h3"
-										className="text-xl text-gray-800 dark:text-gray-600 uppercase tracking-widest font-[100]"
+										className="text-xl text-gray-800 dark:text-gray-600 uppercase tracking-widest font-bold underline"
 									>
 										How to Book
 									</Dialog.Title>
@@ -591,7 +587,9 @@ export default function Home() {
 				</Dialog>
 			</Transition>
 
-			<div style={{ position: "fixed", bottom: 250, right: -50,zIndex:10000000 }}>
+			<div
+				style={{ position: "fixed", bottom: 250, right: -60, zIndex: 10000000 }}
+			>
 				<CopyToClipboard
 					text="+44 7926 627778!"
 					onCopy={() =>
@@ -606,18 +604,33 @@ export default function Home() {
 						type="button"
 						className="inline-flex w-full justify-center -rotate-90 align-middle bg-[#E3C797] px-3 py-2 text-sm text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:w-auto"
 					>
+						<Image
+							src={"/img/sms.png"}
+							alt="sms icon"
+							width={20}
+							height={20}
+							className="me-1"
+						/>
 						+44 7926 627778
 					</button>
 				</CopyToClipboard>
 			</div>
 
-			<div style={{ position: "fixed", bottom: 80, right: -40 ,zIndex:10000000}}>
+			<div
+				style={{ position: "fixed", bottom: 80, right: -40, zIndex: 10000000 }}
+			>
 				<Link href={"https://wa.me/message/2BCUIWKERU3DP1"}>
 					<button
 						type="button"
 						className="inline-flex w-full justify-center -rotate-90 align-middle bg-[#E3C797] px-3 py-2 text-sm text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:w-auto"
 					>
-						<Phone size={18} className="text-gray-500 me-2" />
+						<Image
+							src={"/img/whatsapp.png"}
+							alt="sms icon"
+							width={20}
+							height={20}
+							className="me-1"
+						/>
 						WhatsApp
 					</button>
 				</Link>

@@ -65,14 +65,7 @@ export default function Etiquette({
 									my place.
 								</p>
 
-								<div>
-									<p
-										className={`${aref_ruqaa.className} text-xl font-medium tracking-tight text-gray-600 mb-2`}
-									>
-										TIME KEEPING : You must let me know as soon as possible if
-										you need to cancel your booking.
-									</p>
-								</div>
+								
 								<span
 									className="read-more-button"
 									onClick={() => setIsOpenEtiquette(true)}

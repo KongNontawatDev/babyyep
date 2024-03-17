@@ -28,26 +28,32 @@ export default function About() {
 
 						<h1 className="text-2xl text-gray-800 dark:text-white lg:text-3xl lg:w-96 uppercase tracking-widest font-[100]">
 							<ReactTypingEffect
-							text={["AboutMe"]}
+							text={["ABOUT BABY."]}
 							eraseDelay={10000}
 							speed={300}
 							typingDelay={1000}
 						/>
 						</h1>
+												<p className={`${aref_ruqaa.className} text-lg max-w-lg mt-4 text-gray-500 dark:text-gray-400 `} >
+												I'm Cartier TS, I am a 100% independent
+and experienced high end escort.
+						</p>
 <h3
 							className={`${aref_ruqaa.className} mt-6 text-2xl font-medium text-[#dbbc86]`}
 						>
-							Papuean.
+							Physical
 						</h3>
-						<p className={`${aref_ruqaa.className} text-lg max-w-lg mt-6 text-gray-500 dark:text-gray-400 `} >
-							“ Age : 23 years ”
+						<p className={`${aref_ruqaa.className} text-lg max-w-lg mt-4 text-gray-500 dark:text-gray-400 `} >
+						Sexy Asia bombshell ... I have luxurious long
+brown hair, baby soft skin, mesmerising
+eyes, perfect manicured nails & feet. I am a
+dress size 8 with a peachy bum and big
+boobs (every mans dream) and soft lips
+which love to be passionately kissed. I love
+tight dresses, lingerie and wearing my
+louboutins
 						</p>
-						<p className={`${aref_ruqaa.className} text-lg max-w-lg mt-6 text-gray-500 dark:text-gray-400 `} >
-							“ Height : 170cm ”
-						</p>
-						<p className={`${aref_ruqaa.className} text-lg max-w-lg mt-6 text-gray-500 dark:text-gray-400 `} >
-							“ Weight : 50kg ”
-						</p>
+
 
 					</div>
 				</div>

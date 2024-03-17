@@ -10,7 +10,7 @@ export default function Review1() {
 
 					<div className="p-6 bg-[#FDF6E9] dark:bg-gray-800 md:p-8">
 						<p
-							className={`${aref_ruqaa.className} leading-loose text-gray-500 dark:text-gray-300 line-clamp-4`}
+							className={`${aref_ruqaa.className} leading-loose text-gray-500 dark:text-gray-300 `}
 						>
 							“1 Once I met her I didn't except her to look the same as the picture, actually she looks better than pics sexy and I like her voice and her smellTake good care. I will come back soon.”.
 						</p>
@@ -38,7 +38,7 @@ export default function Review1() {
 
 					<div className="p-6 bg-[#FDF6E9] dark:bg-gray-800 md:p-8">
 						<p
-							className={`${aref_ruqaa.className} leading-loose text-gray-500 dark:text-gray-300 line-clamp-4`}
+							className={`${aref_ruqaa.className} leading-loose text-gray-500 dark:text-gray-300 `}
 						>
 						I booked for whole day service. We had so much fun doing many things she took very such a good care of me. I truly believe she's could be my gf for real DAnana It made my day. I'm very happy. Great choice of using your service.
 						</p>

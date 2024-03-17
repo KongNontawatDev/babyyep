@@ -10,7 +10,7 @@ export default function Review2() {
 
 					<div className="p-6 bg-[#FDF6E9] dark:bg-gray-800 md:p-8">
 						<p
-							className={`${aref_ruqaa.className} leading-loose text-gray-500 dark:text-gray-300 line-clamp-4`}
+							className={`${aref_ruqaa.className} leading-loose text-gray-500 dark:text-gray-300 `}
 						>
 							“I found this when I was out for the meeting. You were recommended by My idea was an office or school uniform and very impressive with the result.  Your lady look so classy, not cheap quality. She so sexy and I love her heels make me so horny. she said It called LOUBOUTIN.  Anyway I fuc the shit out off her pussy and that was crazyyy Wil book again I miss her moan. Lol”.
 						</p>
@@ -38,7 +38,7 @@ export default function Review2() {
 
 					<div className="p-6 bg-[#FDF6E9] dark:bg-gray-800 md:p-8">
 						<p
-							className={`${aref_ruqaa.className} leading-loose text-gray-500 dark:text-gray-300 line-clamp-4`}
+							className={`${aref_ruqaa.className} leading-loose text-gray-500 dark:text-gray-300 `}
 						>
 						" Last Friday I booked for service.  Take good care. She did well with everything. I requested for gf vibe and take a bath and wild sex on bed like crazy. She enjoyed it. It was an amazing sex experience I ever had. I want to fuck her again.  If she has long term gf service, let me know. I buy " 
 						</p>

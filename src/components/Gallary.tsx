@@ -21,7 +21,7 @@ export default function Gallary({
 					className="text-2xl text-center text-gray-800 lg:text-3xl dark:text-white uppercase tracking-widest font-[100]"
 				>
 					<ReactTypingEffect
-						text={["Gallary"]}
+						text={["GALLERY"]}
 						eraseDelay={10000}
 						speed={300}
 						typingDelay={1000}

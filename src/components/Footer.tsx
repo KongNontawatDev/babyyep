@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from "next/navigation";
 import AOS from "aos";
 import ReactTypingEffect from "react-typing-effect";
+import Image from "next/image";
 export default function Footer() {
 	const router = useRouter();
 	useEffect(() => {
@@ -21,13 +22,12 @@ export default function Footer() {
 				<div className="container max-w-[1200px] py-10 mx-auto">
 					<div data-aos="fade-up" className="text-center">
 						<h1 className="mt-2 text-2xl text-gray-800 md:text-3xl dark:text-white uppercase tracking-widest font-[100]">
-							
-														<ReactTypingEffect
-							text={["Contact us"]}
-							eraseDelay={10000}
-							speed={300}
-							typingDelay={1000}
-						/>
+							<ReactTypingEffect
+								text={["Contact us"]}
+								eraseDelay={10000}
+								speed={300}
+								typingDelay={1000}
+							/>
 						</h1>
 
 						<p
@@ -44,9 +44,14 @@ export default function Footer() {
 							}
 							className="flex flex-col items-center justify-center text-center border p-3 shadow-sm rounded-lg hover:bg-[#FDF6E9] active:bg-[#FDF6E9]"
 						>
-							<span className="p-3 text-gray-700 rounded-full bg-[#FDF6E9] dark:bg-gray-800">
-								<MessageSquare />
-							</span>
+							<center>
+								<Image
+									src={"/img/whatsapp.png"}
+									alt="sms icon"
+									width={40}
+									height={40}
+								/>
+							</center>
 
 							<h2
 								className={`${aref_ruqaa.className} mt-4 text-lg font-medium text-gray-800 dark:text-white`}
@@ -76,9 +81,14 @@ export default function Footer() {
 							}
 						>
 							<div className="flex flex-col items-center justify-center text-center  border p-3 shadow-sm rounded-lg hover:bg-[#FDF6E9] active:bg-[#FDF6E9]">
-								<span className="p-3 text-gray-700 rounded-full bg-[#FDF6E9] dark:bg-gray-800">
-									<Send />
-								</span>
+								<center>
+									<Image
+										src={"/img/sms.png"}
+										alt="sms icon"
+										width={40}
+										height={40}
+									/>
+								</center>
 
 								<h2
 									className={`${aref_ruqaa.className} mt-4 text-lg font-medium text-gray-800 dark:text-white`}
@@ -97,8 +107,6 @@ export default function Footer() {
 								</p>
 							</div>
 						</CopyToClipboard>
-
-						
 					</div>
 				</div>
 			</section>
@@ -106,7 +114,11 @@ export default function Footer() {
 			<footer className="bg-gradient-to-r from-[#FDF6E9] to-[#E1D7C1]">
 				<div className="container max-w-[1200px] py-4 mx-auto">
 					© 2024{" "}
-					<a href="https://www.facebook.com/kongnontawat.dev" className="underline" target="_blank">
+					<a
+						href="https://www.facebook.com/kongnontawat.dev"
+						className="underline"
+						target="_blank"
+					>
 						Kong Nontawat.
 					</a>{" "}
 					All rights reserved.

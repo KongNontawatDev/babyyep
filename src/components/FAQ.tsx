@@ -185,6 +185,32 @@ excellent feedback is reference to this.
 					</>
 				)}
 			</Disclosure>
+
+			<Disclosure data-aos="fade-down" as="div" className="mt-2">
+				{({ open }) => (
+					<>
+						<Disclosure.Button className="flex w-full justify-between bg-[#FDF6E9] px-4 py-3 uppercase text-left font-medium text-black hover:bg-[#e2d5b9] focus:outline-none focus-visible:ring focus-visible:ring-[#e2d5b9]">
+							<span className={`${aref_ruqaa.className} `}>Do you offer outcalls?</span>
+							<ChevronUp
+								className={`${
+									open ? "rotate-180 transform" : ""
+								} h-5 w-5 text-black`}
+							/>
+						</Disclosure.Button>
+						<Disclosure.Panel
+							className={`${aref_ruqaa.className} bg-[#fffbf5] px-4 pb-2 pt-4  text-gray-500`}
+						>
+							: Yes I am happy to visit you at a hotel or your private
+residence. Please get in touch to prebook an Outcall. If its
+slightly further for me to travel I may also ask for an additional
+fee and/or min booking length. I always ask for deposits for
+outcalls and sometimes additional security screening if we
+haven't met before. Please note I do not do public nor car meets
+or visit shared flats/houses. Deposits are non negotiable.
+						</Disclosure.Panel>
+					</>
+				)}
+			</Disclosure>
 		</div>
 	);
 }

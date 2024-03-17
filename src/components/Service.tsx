@@ -5,7 +5,7 @@ import CheckboxIcon from "./icon/checkbox";
 import Image from "next/image";
 import AOS from "aos";
 import ReactTypingEffect from "react-typing-effect";
-import { ChevronRight } from "react-feather";
+import { ChevronRight, Minus } from "react-feather";
 const items = [
 	{
 		title: "Full Girlfriend Experience",
@@ -98,9 +98,9 @@ export default function Service({
 									{({ open }) => (
 										<>
 											<Disclosure.Button
-												className={`${aref_ruqaa.className} mx-3 py-2 flex w-full`}
+												className={`${aref_ruqaa.className} mx-3 py-2 flex w-full align-middle justify-center`}
 											>
-												<CheckboxIcon />
+												<Minus size={15} className="mt-1.5"/>
 												<span className="w-full ms-1 flex justify-between align-middle">
 													{item.title}
 													{/* <span className="read-more-button" style={{fontSize:12}}>Read More...</span> */}

@@ -95,12 +95,18 @@ export default function Navbar() {
 							Contact
 						</a>
 					</div>
-					<Link href={'https://wa.me/message/2BCUIWKERU3DP1'}>
+					<Link href={"https://wa.me/message/2BCUIWKERU3DP1"}>
 						<button
 							type="button"
 							className="inline-flex w-full justify-center align-middle bg-white px-3 py-2 text-sm text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:w-auto"
 						>
-							<Phone size={18} className="text-gray-500 me-2" />
+							<Image
+								src={"/img/whatsapp.png"}
+								alt="sms icon"
+								width={20}
+								height={20}
+								className="me-1"
+							/>
 							WhatsApp
 						</button>
 					</Link>
