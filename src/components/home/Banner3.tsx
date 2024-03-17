@@ -11,7 +11,7 @@ export default function Banner3() {
 		});
 	}, []);
 	return (
-		<div className="w-full h-[calc(100vh-72px)] bg-gradient-to-r from-[#FDF6E9] to-[#E1D7C1]">
+		<div className="w-full h-[calc(100vh-72px)]  " style={{background:"url('/img/bg3.png') no-repeat right top",backgroundSize:'100vw 100vh'}}>
 			<div className="container max-w-[1200px] mx-auto  pt-8">
 				<div className="items-center lg:flex">
 					<div data-aos="fade-right" className="w-full lg:w-1/2">

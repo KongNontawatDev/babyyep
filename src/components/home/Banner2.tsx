@@ -11,7 +11,7 @@ export default function Banner2() {
 		});
 	}, []);
 	return (
-		<div className="w-full h-[calc(100vh-72px)] bg-gradient-to-r from-[#E0E2E1] to-[#DADCDB]">
+		<div className="w-full h-[calc(100vh-72px)]  " style={{background:"url('/img/bg2.png') no-repeat right top",backgroundSize:'100vw 100vh'}}>
 			<div className="container max-w-[1200px] mx-auto  pt-8">
 				<div className="items-center lg:flex">
 					<div data-aos="fade-right" className="w-full lg:w-2/3">
