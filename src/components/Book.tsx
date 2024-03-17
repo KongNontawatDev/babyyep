@@ -14,7 +14,7 @@ export default function Book({ setIsOpenBook }: { setIsOpenBook: any }) {
 			<div
 				className="w-full bg-center bg-cover h-[28rem]"
 				style={{
-					background: "url('/img/bg_book.png') no-repeat center top",
+					background: "url('/img/bg1.png') no-repeat center top",
 					backgroundSize: "100%",
 				}}
 			>
