@@ -39,11 +39,11 @@ export default function Banner2() {
 
 					<div data-aos="fade-left" className="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/3 h-[calc(100vh-72px)]">
 						<Image
-							className="h-full  object-cover  object-top"
+							className="lg:h-full h-[80%] -me-20 lg:me-0 -mt-20 lg:mt-0  object-cover  object-top"
 							src="/img/banner3.png"
 							alt="Catalogue-pana.svg"
-							width={390}
-							height={840}
+							width={750}
+							height={1125}
 						/>
 					</div>
 				</div>
